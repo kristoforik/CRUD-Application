@@ -1,0 +1,28 @@
+{
+    "movies": [
+        {
+            "ID": "100",
+            "title": "Avengers: End Game",
+            "year": "2019",
+            "genre": "Superhero"
+        },
+        {
+            "ID": "200",
+            "title": "Green Mile",
+            "year": "1999",
+            "genre": "Drama"
+        },
+        {
+            "ID": "300",
+            "title": "Spired-Man",
+            "year": "2002",
+            "genre": "Superhero"
+        },
+        {
+            "ID": "400",
+            "title": "Knives Out",
+            "year": "2019",
+            "genre": "Detective"
+        }
+    ]
+}
