@@ -20,15 +20,9 @@
         },
         {
             "ID": "400",
-            "title": "Knives Out",
+            "title": "Jurassic",
             "year": "2019",
-            "genre": "Detective"
-        },
-        {
-            "ID": "109",
-            "title": "Batman",
-            "year": "2010",
-            "genre": "Thriller"
+            "genre": "Fantasy"
         }
     ]
 }

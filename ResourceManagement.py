@@ -16,7 +16,7 @@ def creating_movie():
 
 def updating_movie():
     title = input("Enter a new title for your film: ")
-    title = check_title(title)
+    #title = check_title(title)
     year = input("Enter a new year of your film: ")
     year = check_number(year)
     genre = input("Enter a new genre of your film: ")
@@ -39,14 +39,6 @@ def updating_list(old_movie, new_movie):
             movie['genre'] = genre
             #print(movie)
     return info
-
-def deleting_movie(id):
-    n = 0
-    for movie in info['movies']:
-        if movie['ID'] != id:
-            print(n)
-            n += 1
-    return n
         
 def check_number(num):
     while True:
@@ -92,16 +84,11 @@ class Management:
             year = movie['year']
             genre = movie['genre']
             return id, title, year, genre
-    def update(self, id):
-        movie = check_by_id(id)
-        title, year, genre = updating_movie()
-        new_movie = title, year, genre
+    def update(self, movie, new_movie):
         new_list = updating_list(movie, new_movie)
         data.load_into(new_list)
-    def delete(self, id):
-        movie = check_by_id(id)
+    def delete(self, movie):
         info['movies'].remove(movie)
         data.load_into(info)
 
 management = Management()
-management.read('300', 'Spider-Man')
