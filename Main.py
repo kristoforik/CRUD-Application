@@ -1,7 +1,8 @@
-import ResourceManagement, DataPersistance
+from ResourceManagement import Management
+from DataPersistance import Data
 class Application:
-    management = ResourceManagement()
-    data = DataPersistance()
+    management = Management()
+    data = Data()
     def run():
         print("What do you want to do?")
         print("[1] Crate a movie")

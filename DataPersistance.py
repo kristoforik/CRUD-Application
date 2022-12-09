@@ -2,7 +2,7 @@
 import json
 class Data:
     def load_from(self):
-        with open('movies.json') as f:
+        with open('Movies_updated.json') as f:
             data = json.load(f)
         return data
     def load_into(self, data):
@@ -11,5 +11,3 @@ class Data:
         
         
 data = Data()
-info = data.load_from()
-data.load_into(info)
