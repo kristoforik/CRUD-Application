@@ -14,27 +14,15 @@
         },
         {
             "ID": "300",
-            "title": "Spired-Man",
-            "year": "2002",
-            "genre": "Superhero"
+            "title": "Batman",
+            "year": "2008",
+            "genre": "Thriller"
         },
         {
             "ID": "400",
             "title": "Knives Out",
             "year": "2019",
             "genre": "Detective"
-        },
-        {
-            "ID": "1",
-            "title": "vrsc",
-            "year": "231",
-            "genre": "vaavav"
-        },
-        {
-            "ID": "23",
-            "title": "Pigs",
-            "year": "1902",
-            "genre": "drama"
         }
     ]
 }
