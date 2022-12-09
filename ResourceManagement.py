@@ -34,8 +34,12 @@ def updating_list(old_movie, new_movie):
     return info
 
 def deleting_movie(id):
+    n = 0
     for movie in info['movies']:
-        pass
+        if movie['ID'] != id:
+            print(n)
+            n += 1
+    return n
         
 
 
@@ -90,16 +94,18 @@ class Management:
         new_movie = title, year, genre
         new_list = updating_list(movie, new_movie)
         data.load_into(new_list)
-    def delete(self):
-        pass
+    def delete(self, id):
+        movie = check_by_id(id)
+        new_list = info['movies'].remove(movie)
+        data.load_into(new_list)
 
 management = Management()
 #management.read('300')
 
 #management.update('300')
 
-
-'''for ids in info['movies']:
-            if ids['ID'] == id:
-                print(ids)
-                print(ids['ID'], ids['title'], ids['year'], ids['genre'])'''
+a = check_by_id('100')
+print(a in info['movies'])
+print(info)
+info['movies'].remove(a)
+print(info)
