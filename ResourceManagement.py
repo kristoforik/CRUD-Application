@@ -23,6 +23,13 @@ def updating_movie():
     genre = check_genre(genre)
     return title, year, genre
 
+def find_movie():
+    id = input("Enter an ID of the film: ")
+    id = check_number(id)
+    title = input("Enter a title of the film: ")
+    #title = check_title(title)
+    return id, title
+
 def updating_list(old_movie, new_movie):
     title, year, genre, = new_movie
     for movie in info['movies']:
@@ -41,8 +48,6 @@ def deleting_movie(id):
             n += 1
     return n
         
-
-
 def check_number(num):
     while True:
         try:
@@ -65,8 +70,6 @@ def check_if_exists(id, title):
     for movie in info['movies']:
         if movie['ID'] == id and movie['title'] == title:
             return movie
-        else: 
-            return False
 
 def check_by_id(id):
     for movie in info['movies']:
@@ -77,17 +80,18 @@ def check_by_id(id):
 
 
 class Management:
-    def create(self):   
-        movie = creating_movie()
+    def create(self, movie):   
         info["movies"].append(movie)
-        #print(info)
         data.load_into(info)
     def read(self, id, title):
         movie = check_if_exists(id, title)
-        title = movie['title']
-        year = movie['year']
-        genre = movie['genre']
-        return id, title, year, genre
+        if movie == None:
+            return False
+        else: 
+            title = movie['title']
+            year = movie['year']
+            genre = movie['genre']
+            return id, title, year, genre
     def update(self, id):
         movie = check_by_id(id)
         title, year, genre = updating_movie()
@@ -96,16 +100,8 @@ class Management:
         data.load_into(new_list)
     def delete(self, id):
         movie = check_by_id(id)
-        new_list = info['movies'].remove(movie)
-        data.load_into(new_list)
+        info['movies'].remove(movie)
+        data.load_into(info)
 
 management = Management()
-#management.read('300')
-
-#management.update('300')
-
-a = check_by_id('100')
-print(a in info['movies'])
-print(info)
-info['movies'].remove(a)
-print(info)
+management.read('300', 'Spider-Man')

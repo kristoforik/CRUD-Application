@@ -14,15 +14,21 @@
         },
         {
             "ID": "300",
-            "title": "Batman",
-            "year": "2008",
-            "genre": "Thriller"
+            "title": "Spider-Man",
+            "year": "2002",
+            "genre": "Superhero"
         },
         {
             "ID": "400",
             "title": "Knives Out",
             "year": "2019",
             "genre": "Detective"
+        },
+        {
+            "ID": "109",
+            "title": "Batman",
+            "year": "2010",
+            "genre": "Thriller"
         }
     ]
 }
